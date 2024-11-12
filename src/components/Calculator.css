@@ -1,0 +1,114 @@
+/* Calculator Styling */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #333;
+    --button-color: #f1f1f1;
+    --button-hover-color: #e1e1e1;
+    --button-active-color: #ccc;
+    --button-highlight-color: #ff5722;
+    --display-bg-color: #eaeaea;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Main Calculator Container */
+.calculator {
+    width: 320px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-family: var(--font-family);
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Display Area */
+.display {
+    font-size: 2.5em;
+    text-align: right;
+    padding: 20px;
+    background-color: var(--display-bg-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 70px;
+    color: var(--secondary-color);
+}
+
+/* Buttons Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* General Button Style */
+.buttons button {
+    height: 70px;
+    font-size: 1.8em;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover and Active Button States */
+.buttons button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.buttons button:active {
+    background-color: var(--button-active-color);
+}
+
+/* Highlight Buttons */
+.buttons button:nth-child(4n) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.buttons button:nth-child(15),
+.buttons button:nth-child(16) {
+    background-color: var(--button-highlight-color);
+    color: white;
+}
+
+/* Special Button Styles */
+button.clear {
+    background-color: #f44336;
+    color: white;
+}
+
+button.equals {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .display {
+        font-size: 2em;
+        height: 60px;
+    }
+
+    .buttons button {
+        font-size: 1.5em;
+        height: 60px;
+    }
+}
